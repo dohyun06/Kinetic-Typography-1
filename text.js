@@ -16,7 +16,7 @@ export class Text {
         this.canvas.height = stageHeight;
 
         const myText = str;
-        const fontWidth = 700;
+        const fontWidth = (stageWidth * 7) / 20;
         const fontSize = stageWidth / 4;
         const fontName = 'Hind';
 

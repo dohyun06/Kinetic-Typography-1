@@ -12,6 +12,7 @@ export class Visual {
         this.mouse = { x: 0, y: 0, radius: 100 };
 
         document.addEventListener('pointermove', this.onMove.bind(this), false);
+        document.addEventListener('pointerup', this.pointerUp.bind(this), false);
     }
 
     show(stageWidth, stageHeight, stage) {
@@ -64,5 +65,10 @@ export class Visual {
     onMove(e) {
         this.mouse.x = e.clientX;
         this.mouse.y = e.clientY;
+    }
+
+    pointerUp() {
+        this.mouse.x = 0;
+        this.mouse.y = 0;
     }
 }
